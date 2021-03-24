@@ -1,65 +1,242 @@
-*{ box-sizing: border-box;}
+*{ 
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
 
+/* mobile first*/
+/*inicio Body*/
 body {
-    background-color: #EAC926;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    width:100vw;
-    height: 100vh;
-    margin-bottom: 0%;
-}
+    background-color: #ebebeb;
 
-main section h3{
-    font-size: 24px;
 }
-.price{
-    font-size: 18px;
-}
-main section p {
-    font-size: 16px;
-}
-main section h4{
-    font-size: 16px;
-}
-#searchterm{
-    background-color:#ffffff;
-}
-
-
-.burger-menu{
-    text-align:center;
-} 
-.fa{
+    /*incio header*/    
+    .main-header{
+        background-color:#EAC926; ;
+        padding:20px;
+        margin:0px;
+        font-size: 1.2em;
+        color:#181818;
+    }
+    .logo{
+        width: 150px;
+    }
+    .search-bar{
+        display:inline-flex;
+        align-items:center;
+    }
+    .copy-header{
+        display: block;
+        min-width: 150px;
+        max-width: 350px;
+        font-size:1em;
+        text-align:right;
+    }
     
-    font-size: 20px;
-    border-radius: 5px;    
-    background-color: #03264C; 
-    color:#ffffff;    
-    height: 20%;  
-    padding: 8px;
-    margin:1px;
- }
-footer{
-    width:100vw;
-    background-color:#ffffff ;
-    text-align: center;
-    color:#666;
-    height: 100vh;
-    margin-bottom: 0px;
-}
- footer section h3{
-     font-weight: bold;
-     
- }
- footer i {
-     margin-top: 20px;
-     margin-bottom: 0px;
-    font-size: 40px;
-     color:#03264C;
- }
- footer h5{
-    margin-top: 50px;
+    .burger-menu{
+        background-color: #03264C; 
+        color:#ffffff;    
+        display:block;
+        max-width:50px;
+        padding: 15px 0;
+        border-radius: 8px;    
+        text-align: center;
+        font-size: 18px;
+        margin:auto;
+    }
+    .main-header-bottom-bar{
+        display: none;
+        flex-wrap: wrap;
+    }
+    .main-header-bottom-bar ul {
+       list-style:none;
+       margin:0px;
+       padding:0px;
+    }
+    .main-header-bottom-bar a{
+        text-decoration: none;
+        color:#222222;
+    }
+    .main-header-img{
+        width: 100vw;
+        display: block;
+    }    
+    /*fin header*/
+
+    /* inicio main*/
+
+    .main{
+        /* display: block; */
+        width: 90%;
+        padding: 10px;
+        margin:auto;
+        background-color:#ebebeb ;
+    }    
+        /* section */
+        
+        main section h3{
+            font-size: 24px;
+            color:#666;
+        }
+        main section p {
+            font-size: 16px;
+        }
+            /* article */
+            main section article {            
+                margin-bottom: 10px;
+                background-color:  #ffffff;
+            }
+            .product_img{
+                width:100%;
+                height:100%;
+                margin:0;
+            }
+            .boxart {
+                border-top: 1px #ebebeb solid;
+                padding:15px;
+                background-color:#ffffff ;
+                margin:0px;
+            }
+            .price{
+                font-size: 18px;
+            }
+            .discount{
+                color:#39b54a;
+            }
+            .circle{
+                display:block;
+                width: 50px;
+                height: 50px;
+                border:#39b54a 1px solid;
+                border-radius: 40px;
+            }
+            /*camioncito*/
+            main section i{
+                font-size:20px;
+                padding:6px;
+                color:#39b54a;
+            }
+            main section article h4{
+                font-size: 16px;
+                display: none;
+                color: #666;
+            }   
+            /*fin article */
+        
+        /* fin section */
+
+    /* Fin main*/
+
+    /*inicio Footer*/
+    footer{
+        width:100vw;
+        background-color:#ffffff ;
+        text-align: center;
+        color:#666;
+        height: 100vh;
+        margin-bottom: 0px;
+    }
+    footer section h3{
+        font-weight: bold;
+        
+    }
+    footer i {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 40px;
+        color:#03264C;
+    }
+    footer h5{
+        margin-top: 50px;
+        
+        text-align: left;
+        font-size: 12px;
+    }
+    /*fin Footer*/
+
+
+/*Fin Body*/
+
+
+@media screen and (min-width:361px)  {
+    /*tablets*/
+    .logo{
+        width: 200px;
+    }
+
+    .main-header-top-bar{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-grow: 1;
+
+    }
+    .copy-header{
+        display: block;
+        min-width: 150px;
+        max-width: 300px;
+        text-align:right;
+    }
+    .burger-menu{
+        display:none;
+    }
+    .main-header-bottom-bar{      
+        display:flex; 
+        flex-grow:1;
+        justify-content:space-between;
+        align-items:center;
+        margin-top: 10px;
+    }
+    .main-header-bottom-bar ul{
+        display: flex;
+        flex-grow:1;
+        font-size: 0.7em;
+    }
     
-     text-align: left;
-     font-size: 12px;
- }
+    .main-header-bottom-bar li{
+        margin:5px;
+    }
+    
+    main section article h4{
+        display: block;
+    }
+}
+    
+@media screen and (min-width: 769px){
+    .logo{
+        width: 250px;
+    }
+    .main-header-top-bar, .main-header-bottom-bar{         
+        max-width: 769px;
+        margin:auto;
+    }
+    .main-header-bottom-bar li{
+        margin: 0 10px;
+    }
+    .main-header-bottom-bar a{
+        font-size: 1.5em;
+        margin-top:50px;
+    }
+    .main-header-top-bar {
+        align-items: center;
+    }
+    
+    .copy-header{
+        max-width:none;
+        margin: 0px;
+        font-size: 1.2em;
+    }
+    .logo{
+        width: 250px;
+    }
+
+    main section article {
+        box-shadow: 0px 0px 10px #646464;
+      }
+    main section article h4{
+        display: block;
+    }
+}
+
